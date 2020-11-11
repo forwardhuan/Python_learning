@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 import cv2
+import os
+from constants import res_image_path
 
 
 def cv_show(name, image):
@@ -11,7 +13,7 @@ def cv_show(name, image):
     # cv2.destroyAllWindows()
 
 
-img = cv2.imread('../resource/image/cat.jpg')
+img = cv2.imread(os.path.join(res_image_path, "cat.jpg"))
 b, g, r = cv2.split(img)
 
 print(b.shape)

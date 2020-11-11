@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 import cv2  # opencv默认读取的格式是BGR
+import os
+from constants import res_video_path
 
-vc = cv2.VideoCapture('../resource/video/test.mp4')
+print(res_video_path)
+vc = cv2.VideoCapture(os.path.join(res_video_path, "test.mp4"))
 
 # 检查是否打开正确
 if vc.isOpened():
